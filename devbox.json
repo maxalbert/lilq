@@ -9,6 +9,9 @@
       ". $VENV_DIR/bin/activate"
     ],
     "scripts": {
+      "spdx-headers": [
+        "reuse annotate --copyright=\"Maximilian Albert <maximilian.albert@gmail.com>\" --license=\"MPL-2.0\" --recursive --skip-unrecognised ."
+      ],
       "test": [
         "echo \"Error: no test specified\" && exit 1"
       ]
