@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "microq"
+name = "lilq"
 version = "0.0.1"
 description = "Minimal implementation of a query builder (inspired by Django's Q objects)"
 authors = [
