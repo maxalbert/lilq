@@ -1,0 +1,126 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "python@latest": {
+      "last_modified": "2024-08-14T11:41:26Z",
+      "plugin_version": "0.0.3",
+      "resolved": "github:NixOS/nixpkgs/0cb2fd7c59fed0cd82ef858cbcbdb552b9a33465#python3",
+      "source": "devbox-search",
+      "version": "3.12.4",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/xnm9sbp02pp2704dvx4kb8g0yxn263pn-python3-3.12.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/xnm9sbp02pp2704dvx4kb8g0yxn263pn-python3-3.12.4"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/wviq85xs5awfp75mj5sjq9mn1nkqhq12-python3-3.12.4",
+              "default": true
+            },
+            {
+              "name": "debug",
+              "path": "/nix/store/cglyj6nr5rcr0j9c36xqvybk5rj7hi6x-python3-3.12.4-debug"
+            }
+          ],
+          "store_path": "/nix/store/wviq85xs5awfp75mj5sjq9mn1nkqhq12-python3-3.12.4"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/dc7kp6g4s76jlfjhjdpibjfc8pglhlcs-python3-3.12.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/dc7kp6g4s76jlfjhjdpibjfc8pglhlcs-python3-3.12.4"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/04gg5w1s662l329a8kh9xcwyp0k64v5a-python3-3.12.4",
+              "default": true
+            },
+            {
+              "name": "debug",
+              "path": "/nix/store/w2ycb82p1q4xdpm2pzcqk7k58f89wv6l-python3-3.12.4-debug"
+            }
+          ],
+          "store_path": "/nix/store/04gg5w1s662l329a8kh9xcwyp0k64v5a-python3-3.12.4"
+        }
+      }
+    },
+    "uv@latest": {
+      "last_modified": "2024-08-27T08:49:48Z",
+      "resolved": "github:NixOS/nixpkgs/a6292e34000dc93d43bccf78338770c1c5ec8a99#uv",
+      "source": "devbox-search",
+      "version": "0.3.3",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/g6x2cvcjwv0s4insfb18v06k6dpbaw1q-uv-0.3.3",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/gbd5936982500ng0cwhk092liy2gnwaz-uv-0.3.3-dist"
+            }
+          ],
+          "store_path": "/nix/store/g6x2cvcjwv0s4insfb18v06k6dpbaw1q-uv-0.3.3"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/2pqyxldxjjx3kvhklw2j6xj2j92wyssq-uv-0.3.3",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/m85k4rjlwq7b8ka6vk1vc5yg50r8hb5z-uv-0.3.3-dist"
+            }
+          ],
+          "store_path": "/nix/store/2pqyxldxjjx3kvhklw2j6xj2j92wyssq-uv-0.3.3"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/f4rxqw7w472cq4pwnm3agfc68p5nzzan-uv-0.3.3",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/jda186lhvchqv5lnzkdccaywcjs1qnns-uv-0.3.3-dist"
+            }
+          ],
+          "store_path": "/nix/store/f4rxqw7w472cq4pwnm3agfc68p5nzzan-uv-0.3.3"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/j0df2r83clfppvbjvqgp3aad3x8q3872-uv-0.3.3",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/wxzkc3fvl4ir65k9mlwnynmdyi005ppf-uv-0.3.3-dist"
+            }
+          ],
+          "store_path": "/nix/store/j0df2r83clfppvbjvqgp3aad3x8q3872-uv-0.3.3"
+        }
+      }
+    }
+  }
+}
