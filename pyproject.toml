@@ -16,4 +16,5 @@ dev = [
     "ipython",
     "jupyterlab",
     "pytest",
+    "reuse",
 ]
