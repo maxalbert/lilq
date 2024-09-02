@@ -1,6 +1,8 @@
 from abc import ABCMeta, abstractmethod
 from typing import Any
 
+from.transformation import Transformation
+
 
 class BaseQuery(metaclass=ABCMeta):
     def bind(self, target: Any):
@@ -38,8 +40,8 @@ class Q(BaseQuery):
     def __or__(self, other):
         return Or(self, other)
 
-    def then(self, **kwargs):
-        raise NotImplementedError()
+    def then(self, **rules):
+        return Transformation(query=self, rules=rules)
 
 
 class And(BaseQuery):
