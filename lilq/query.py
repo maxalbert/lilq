@@ -1,7 +1,7 @@
 from abc import ABCMeta, abstractmethod
 from typing import Any
 
-from.transformation import Transformation
+from .transformation import Transformation
 
 
 class BaseQuery(metaclass=ABCMeta):
@@ -24,13 +24,21 @@ class BoundQuery:
 
 def get_matcher_func(key: str, value: str):
     if key.endswith("__startswith"):
+
         def _func(target):
             attr_name = key.removesuffix("__startswith")
             return getattr(target, attr_name).startswith(value)
+    elif key.endswith("__contains"):
+        def _func(target):
+            attr_name = key.removesuffix("__contains")
+            return value in getattr(target, attr_name)
     else:
+
         def _func(target):
             return getattr(target, key) == value
+
     return _func
+
 
 class Q(BaseQuery):
     def __init__(self, **kwargs):
