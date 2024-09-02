@@ -22,9 +22,20 @@ class BoundQuery:
         return self.query.matches(self.target)
 
 
+def get_matcher_func(key: str, value: str):
+    if key.endswith("__startswith"):
+        def _func(target):
+            attr_name = key.removesuffix("__startswith")
+            return getattr(target, attr_name).startswith(value)
+    else:
+        def _func(target):
+            return getattr(target, key) == value
+    return _func
+
 class Q(BaseQuery):
     def __init__(self, **kwargs):
         self.kwargs = kwargs
+        self.matchers = [get_matcher_func(key, value) for (key, value) in self.kwargs.items()]
 
     def __repr__(self):
         clsname = self.__class__.__name__
@@ -32,7 +43,7 @@ class Q(BaseQuery):
         return f"{clsname}({', '.join(arg_strings)})"
 
     def matches(self, target: Any):
-        return all([getattr(target, attr_name) == value for (attr_name, value) in self.kwargs.items()])
+        return all([func(target) for func in self.matchers])
 
     def __and__(self, other):
         return And(self, other)

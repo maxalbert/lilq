@@ -15,6 +15,16 @@ def test_simple_query():
     assert not q.matches(item2)
 
 
+def test_startswith():
+    item1 = Mock(aaa="foobar")
+    item2 = Mock(aaa="quuxfoo")
+
+    q = Q(aaa__startswith="foo")
+
+    assert q.matches(item1)
+    assert not q.matches(item2)
+
+
 def test_simple_transformation():
     q = If(aaa="foo").then(aaa="bar", bbb="quux")
     item1 = Item(aaa="foo", bbb=None)
