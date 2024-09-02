@@ -25,8 +25,9 @@ class Q(BaseQuery):
         self.kwargs = kwargs
 
     def __repr__(self):
+        clsname = self.__class__.__name__
         arg_strings = [f"{name}={value!r}" for (name, value) in self.kwargs.items()]
-        return f"C({', '.join(arg_strings)})"
+        return f"{clsname}({', '.join(arg_strings)})"
 
     def matches(self, target: Any):
         return all([getattr(target, attr_name) == value for (attr_name, value) in self.kwargs.items()])
